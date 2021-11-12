@@ -34,6 +34,8 @@ Partial Class RegistroEvaluacion
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.MC = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
+        Me.MC_ELIMINAR = New System.Windows.Forms.ToolStripMenuItem()
         Me.COMPONENTE = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
@@ -44,12 +46,10 @@ Partial Class RegistroEvaluacion
         Me.ELIMINAR = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.BUSCAR = New System.Windows.Forms.ToolStripLabel()
-        Me.MC = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
-        Me.MC_ELIMINAR = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
         Me.MC.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -88,6 +88,7 @@ Partial Class RegistroEvaluacion
         '
         'VALOR_PORCENTUAL
         '
+        Me.VALOR_PORCENTUAL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.VALOR_PORCENTUAL.FormattingEnabled = True
         Me.VALOR_PORCENTUAL.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
         Me.VALOR_PORCENTUAL.Location = New System.Drawing.Point(106, 23)
@@ -123,6 +124,7 @@ Partial Class RegistroEvaluacion
         '
         'BUSCO
         '
+        Me.BUSCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.BUSCO.FormattingEnabled = True
         Me.BUSCO.Location = New System.Drawing.Point(158, 37)
         Me.BUSCO.Name = "BUSCO"
@@ -158,6 +160,30 @@ Partial Class RegistroEvaluacion
         '
         Me.ColumnHeader3.Text = "Porcentaje"
         Me.ColumnHeader3.Width = 94
+        '
+        'MC
+        '
+        Me.MC.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MC_ELIMINAR})
+        Me.MC.Name = "MC"
+        Me.MC.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MC.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
+        Me.MC.RenderStyle.ColorTable = Nothing
+        Me.MC.RenderStyle.RoundedEdges = True
+        Me.MC.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
+        Me.MC.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MC.RenderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.MC.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
+        Me.MC.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.MC.ShowItemToolTips = False
+        Me.MC.Size = New System.Drawing.Size(118, 26)
+        '
+        'MC_ELIMINAR
+        '
+        Me.MC_ELIMINAR.Enabled = False
+        Me.MC_ELIMINAR.Image = CType(resources.GetObject("MC_ELIMINAR.Image"), System.Drawing.Image)
+        Me.MC_ELIMINAR.Name = "MC_ELIMINAR"
+        Me.MC_ELIMINAR.Size = New System.Drawing.Size(117, 22)
+        Me.MC_ELIMINAR.Text = "Eliminar"
         '
         'COMPONENTE
         '
@@ -236,30 +262,6 @@ Partial Class RegistroEvaluacion
         Me.BUSCAR.Size = New System.Drawing.Size(62, 22)
         Me.BUSCAR.Text = "Buscar"
         '
-        'MC
-        '
-        Me.MC.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MC_ELIMINAR})
-        Me.MC.Name = "MC"
-        Me.MC.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MC.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
-        Me.MC.RenderStyle.ColorTable = Nothing
-        Me.MC.RenderStyle.RoundedEdges = True
-        Me.MC.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
-        Me.MC.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MC.RenderStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.MC.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
-        Me.MC.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.MC.ShowItemToolTips = False
-        Me.MC.Size = New System.Drawing.Size(118, 26)
-        '
-        'MC_ELIMINAR
-        '
-        Me.MC_ELIMINAR.Enabled = False
-        Me.MC_ELIMINAR.Image = CType(resources.GetObject("MC_ELIMINAR.Image"), System.Drawing.Image)
-        Me.MC_ELIMINAR.Name = "MC_ELIMINAR"
-        Me.MC_ELIMINAR.Size = New System.Drawing.Size(117, 22)
-        Me.MC_ELIMINAR.Text = "Eliminar"
-        '
         'RegistroEvaluacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -270,6 +272,7 @@ Partial Class RegistroEvaluacion
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -280,9 +283,9 @@ Partial Class RegistroEvaluacion
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.MC.ResumeLayout(False)
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
-        Me.MC.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

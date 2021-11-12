@@ -31,13 +31,15 @@ Partial Class PRINCIPAL
         Me.M_DOCENTE = New System.Windows.Forms.ToolStripMenuItem()
         Me.M_ESTUDIANTES = New System.Windows.Forms.ToolStripMenuItem()
         Me.EvaluacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RendimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistroAcademicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.M_PRINCIPAL_REGISTRO})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.M_PRINCIPAL_REGISTRO, Me.RendimientoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
@@ -97,6 +99,19 @@ Partial Class PRINCIPAL
         Me.EvaluacionToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.EvaluacionToolStripMenuItem.Text = "Evaluacion"
         '
+        'RendimientoToolStripMenuItem
+        '
+        Me.RendimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroAcademicoToolStripMenuItem})
+        Me.RendimientoToolStripMenuItem.Name = "RendimientoToolStripMenuItem"
+        Me.RendimientoToolStripMenuItem.Size = New System.Drawing.Size(87, 24)
+        Me.RendimientoToolStripMenuItem.Text = "Rendimiento"
+        '
+        'RegistroAcademicoToolStripMenuItem
+        '
+        Me.RegistroAcademicoToolStripMenuItem.Name = "RegistroAcademicoToolStripMenuItem"
+        Me.RegistroAcademicoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegistroAcademicoToolStripMenuItem.Text = "Registro academico"
+        '
         'PRINCIPAL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -108,6 +123,7 @@ Partial Class PRINCIPAL
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PRINCIPAL"
@@ -128,4 +144,6 @@ Partial Class PRINCIPAL
     Friend WithEvents M_DOCENTE As ToolStripMenuItem
     Friend WithEvents M_ESTUDIANTES As ToolStripMenuItem
     Friend WithEvents EvaluacionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RendimientoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroAcademicoToolStripMenuItem As ToolStripMenuItem
 End Class

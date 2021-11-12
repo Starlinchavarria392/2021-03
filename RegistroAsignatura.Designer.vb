@@ -55,12 +55,12 @@ Partial Class RegistroAsignatura
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.MC = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
+        Me.MC_ELIMINAR = New System.Windows.Forms.ToolStripMenuItem()
         Me.BUSCO = New System.Windows.Forms.ComboBox()
         Me.MODALIDAD1 = New System.Windows.Forms.RadioButton()
         Me.NOMBRE1 = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.MC = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
-        Me.MC_ELIMINAR = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -161,6 +161,7 @@ Partial Class RegistroAsignatura
         '
         'REGIDA
         '
+        Me.REGIDA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.REGIDA.FormattingEnabled = True
         Me.REGIDA.Items.AddRange(New Object() {"CUATRIMESTRE", "SEMESTRE"})
         Me.REGIDA.Location = New System.Drawing.Point(71, 22)
@@ -221,6 +222,7 @@ Partial Class RegistroAsignatura
         '
         'MODALIDAD
         '
+        Me.MODALIDAD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.MODALIDAD.FormattingEnabled = True
         Me.MODALIDAD.Items.AddRange(New Object() {"PRESENCIAL", "EN LINEA"})
         Me.MODALIDAD.Location = New System.Drawing.Point(84, 117)
@@ -231,6 +233,7 @@ Partial Class RegistroAsignatura
         '
         'NIVEL
         '
+        Me.NIVEL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.NIVEL.FormattingEnabled = True
         Me.NIVEL.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
         Me.NIVEL.Location = New System.Drawing.Point(84, 50)
@@ -362,8 +365,33 @@ Partial Class RegistroAsignatura
         Me.ColumnHeader6.Text = "Regida"
         Me.ColumnHeader6.Width = 114
         '
+        'MC
+        '
+        Me.MC.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MC_ELIMINAR})
+        Me.MC.Name = "MC"
+        Me.MC.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MC.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
+        Me.MC.RenderStyle.ColorTable = Nothing
+        Me.MC.RenderStyle.RoundedEdges = True
+        Me.MC.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
+        Me.MC.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MC.RenderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.MC.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
+        Me.MC.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.MC.ShowItemToolTips = False
+        Me.MC.Size = New System.Drawing.Size(118, 26)
+        '
+        'MC_ELIMINAR
+        '
+        Me.MC_ELIMINAR.Enabled = False
+        Me.MC_ELIMINAR.Image = CType(resources.GetObject("MC_ELIMINAR.Image"), System.Drawing.Image)
+        Me.MC_ELIMINAR.Name = "MC_ELIMINAR"
+        Me.MC_ELIMINAR.Size = New System.Drawing.Size(117, 22)
+        Me.MC_ELIMINAR.Text = "Eliminar"
+        '
         'BUSCO
         '
+        Me.BUSCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.BUSCO.FormattingEnabled = True
         Me.BUSCO.Location = New System.Drawing.Point(236, 36)
         Me.BUSCO.Margin = New System.Windows.Forms.Padding(2)
@@ -405,30 +433,6 @@ Partial Class RegistroAsignatura
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Criterio de busqueda"
         '
-        'MC
-        '
-        Me.MC.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MC_ELIMINAR})
-        Me.MC.Name = "MC"
-        Me.MC.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MC.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
-        Me.MC.RenderStyle.ColorTable = Nothing
-        Me.MC.RenderStyle.RoundedEdges = True
-        Me.MC.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
-        Me.MC.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MC.RenderStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.MC.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
-        Me.MC.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.MC.ShowItemToolTips = False
-        Me.MC.Size = New System.Drawing.Size(118, 26)
-        '
-        'MC_ELIMINAR
-        '
-        Me.MC_ELIMINAR.Enabled = False
-        Me.MC_ELIMINAR.Image = CType(resources.GetObject("MC_ELIMINAR.Image"), System.Drawing.Image)
-        Me.MC_ELIMINAR.Name = "MC_ELIMINAR"
-        Me.MC_ELIMINAR.Size = New System.Drawing.Size(117, 22)
-        Me.MC_ELIMINAR.Text = "Eliminar"
-        '
         'RegistroAsignatura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -438,6 +442,7 @@ Partial Class RegistroAsignatura
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RegistroAsignatura"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

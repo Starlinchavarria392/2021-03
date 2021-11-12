@@ -114,6 +114,7 @@ Partial Class RegistroHorario
         '
         'CB_BÚSQUEDA
         '
+        Me.CB_BÚSQUEDA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_BÚSQUEDA.FormattingEnabled = True
         Me.CB_BÚSQUEDA.Location = New System.Drawing.Point(224, 31)
         Me.CB_BÚSQUEDA.Name = "CB_BÚSQUEDA"
@@ -183,6 +184,7 @@ Partial Class RegistroHorario
         '
         'CB_NÚMERO
         '
+        Me.CB_NÚMERO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_NÚMERO.FormattingEnabled = True
         Me.CB_NÚMERO.Location = New System.Drawing.Point(243, 70)
         Me.CB_NÚMERO.Name = "CB_NÚMERO"
@@ -200,6 +202,7 @@ Partial Class RegistroHorario
         '
         'CB_RECINTO
         '
+        Me.CB_RECINTO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_RECINTO.FormattingEnabled = True
         Me.CB_RECINTO.Location = New System.Drawing.Point(86, 70)
         Me.CB_RECINTO.Name = "CB_RECINTO"
@@ -335,6 +338,7 @@ Partial Class RegistroHorario
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RegistroHorario"
         Me.Text = "Registro de Horario"

@@ -210,14 +210,14 @@ Partial Class RegistroDocentes
         Me.MC.RenderStyle.SelectionForeColor = System.Drawing.Color.White
         Me.MC.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
         Me.MC.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.MC.Size = New System.Drawing.Size(181, 48)
+        Me.MC.Size = New System.Drawing.Size(118, 26)
         '
         'MC_ELIMINAR
         '
         Me.MC_ELIMINAR.Enabled = False
         Me.MC_ELIMINAR.Image = CType(resources.GetObject("MC_ELIMINAR.Image"), System.Drawing.Image)
         Me.MC_ELIMINAR.Name = "MC_ELIMINAR"
-        Me.MC_ELIMINAR.Size = New System.Drawing.Size(180, 22)
+        Me.MC_ELIMINAR.Size = New System.Drawing.Size(117, 22)
         Me.MC_ELIMINAR.Text = "Eliminar"
         '
         'BUSCO
@@ -481,6 +481,7 @@ Partial Class RegistroDocentes
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RegistroDocentes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

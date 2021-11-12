@@ -151,6 +151,12 @@
     <Compile Include="RegistroDocentes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RENDIMIENTO.Designer.vb">
+      <DependentUpon>RENDIMIENTO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RENDIMIENTO.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PRINCIPAL.resx">
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDocentes.resx">
       <DependentUpon>RegistroDocentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RENDIMIENTO.resx">
+      <DependentUpon>RENDIMIENTO.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
