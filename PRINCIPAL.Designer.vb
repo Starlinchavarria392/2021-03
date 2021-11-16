@@ -59,7 +59,7 @@ Partial Class PRINCIPAL
         '
         Me.M_HORARIO.Image = CType(resources.GetObject("M_HORARIO.Image"), System.Drawing.Image)
         Me.M_HORARIO.Name = "M_HORARIO"
-        Me.M_HORARIO.Size = New System.Drawing.Size(184, 26)
+        Me.M_HORARIO.Size = New System.Drawing.Size(134, 22)
         Me.M_HORARIO.Text = "Horario"
         Me.M_HORARIO.Visible = False
         '
@@ -67,7 +67,7 @@ Partial Class PRINCIPAL
         '
         Me.M_SECCIONES.Image = CType(resources.GetObject("M_SECCIONES.Image"), System.Drawing.Image)
         Me.M_SECCIONES.Name = "M_SECCIONES"
-        Me.M_SECCIONES.Size = New System.Drawing.Size(184, 26)
+        Me.M_SECCIONES.Size = New System.Drawing.Size(134, 22)
         Me.M_SECCIONES.Text = "Secciones"
         Me.M_SECCIONES.Visible = False
         '
@@ -75,28 +75,28 @@ Partial Class PRINCIPAL
         '
         Me.M_ASIGNATURA.Image = CType(resources.GetObject("M_ASIGNATURA.Image"), System.Drawing.Image)
         Me.M_ASIGNATURA.Name = "M_ASIGNATURA"
-        Me.M_ASIGNATURA.Size = New System.Drawing.Size(184, 26)
+        Me.M_ASIGNATURA.Size = New System.Drawing.Size(134, 22)
         Me.M_ASIGNATURA.Text = "Asignatura"
         '
         'M_DOCENTE
         '
         Me.M_DOCENTE.Image = CType(resources.GetObject("M_DOCENTE.Image"), System.Drawing.Image)
         Me.M_DOCENTE.Name = "M_DOCENTE"
-        Me.M_DOCENTE.Size = New System.Drawing.Size(184, 26)
+        Me.M_DOCENTE.Size = New System.Drawing.Size(134, 22)
         Me.M_DOCENTE.Text = "Docente"
         '
         'M_ESTUDIANTES
         '
         Me.M_ESTUDIANTES.Image = CType(resources.GetObject("M_ESTUDIANTES.Image"), System.Drawing.Image)
         Me.M_ESTUDIANTES.Name = "M_ESTUDIANTES"
-        Me.M_ESTUDIANTES.Size = New System.Drawing.Size(184, 26)
+        Me.M_ESTUDIANTES.Size = New System.Drawing.Size(134, 22)
         Me.M_ESTUDIANTES.Text = "Estudiantes"
         '
         'EvaluacionToolStripMenuItem
         '
         Me.EvaluacionToolStripMenuItem.Image = CType(resources.GetObject("EvaluacionToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EvaluacionToolStripMenuItem.Name = "EvaluacionToolStripMenuItem"
-        Me.EvaluacionToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
+        Me.EvaluacionToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.EvaluacionToolStripMenuItem.Text = "Evaluacion"
         '
         'RendimientoToolStripMenuItem

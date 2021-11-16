@@ -48,7 +48,7 @@
     Friend Sub REFRESCAR()
         T.Tables.Clear()
         L.Items.Clear()
-        SQL = "SELECT ID, NOMBRE, NIVEL, DURACION, MODALIDAD, REGIDA, APROBACION FROM ASIGNATURA"
+        SQL = "SELECT ID, NOMBRE, NIVEL, NOTA, DURACION, MODALIDAD, REGIDA, APROBACION FROM ASIGNATURA"
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
             For I = 0 To T.Tables(0).Rows.Count - 1
@@ -93,9 +93,9 @@
         SQL = "SELECT ID FROM ASIGNATURA WHERE ID = " & PK & ""
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then 'EXISTE EL DATO (ACTUALIZAR)
-            SQL = "UPDATE ASIGNATURA SET NOMBRE = '" & NOMBRE.Text & "', NIVEL = '" & NIVEL.Text & "', DURACION = '" & Integer.Parse(DURACION.Text) & "', MODALIDAD = '" & MODALIDAD.Text & "', REGIDA = '" & REGIDA.Text & "', APROBACION = '" & Integer.Parse(NOTA.Text) & "' WHERE ID = " & PK & ""
+            SQL = "UPDATE ASIGNATURA SET NOMBRE = '" & NOMBRE.Text & "', NIVEL = '" & NIVEL.Text & "', NOTA = '" & Integer.Parse(NOTA.Text) & "',DURACION = '" & Integer.Parse(DURACION.Text) & "',MODALIDAD = '" & MODALIDAD.Text & "', REGIDA = '" & REGIDA.Text & "',  WHERE ID = " & PK & ""
         Else '(INSERTAR)
-            SQL = "INSERT INTO ASIGNATURA (ID, NOMBRE, NIVEL, DURACION, MODALIDAD, REGIDA, APROBACION) VALUES(" & GENERAR_PK("ASIGNATURA") & ", '" & NOMBRE.Text & "', '" & NIVEL.Text & "', '" & DURACION.Text & "', '" & MODALIDAD.Text & "', '" & REGIDA.Text & "', '" & NOTA.Text & "')"
+            SQL = "INSERT INTO ASIGNATURA (ID, NOMBRE, NIVEL, NOTA, DURACION, MODALIDAD, REGIDA) VALUES(" & GENERAR_PK("ASIGNATURA") & ", '" & NOMBRE.Text & "', '" & NIVEL.Text & "', '" & NOTA.Text & "', '" & DURACION.Text & "', '" & MODALIDAD.Text & "', '" & REGIDA.Text & "')"
         End If
         EJECUTAR(SQL)
         Nuevo1()
@@ -107,10 +107,10 @@
             PK = L.SelectedItems(0).SubItems(0).Text
             NOMBRE.Text = L.SelectedItems(0).SubItems(1).Text
             NIVEL.Text = L.SelectedItems(0).SubItems(2).Text
-            DURACION.Text = L.SelectedItems(0).SubItems(3).Text
-            MODALIDAD.Text = L.SelectedItems(0).SubItems(4).Text
-            REGIDA.Text = L.SelectedItems(0).SubItems(5).Text
-            NOTA.Text = L.SelectedItems(0).SubItems(6).Text
+            NOTA.Text = L.SelectedItems(0).SubItems(3).Text
+            DURACION.Text = L.SelectedItems(0).SubItems(4).Text
+            MODALIDAD.Text = L.SelectedItems(0).SubItems(5).Text
+            REGIDA.Text = L.SelectedItems(0).SubItems(6).Text
         End If
     End Sub
 

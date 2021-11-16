@@ -22,4 +22,12 @@
     Private Sub EvaluacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EvaluacionToolStripMenuItem.Click
         RegistroEvaluacion.Show()
     End Sub
+
+    Private Sub RendimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RendimientoToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub RegistroAcademicoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroAcademicoToolStripMenuItem.Click
+        RENDIMIENTO.Show()
+    End Sub
 End Class
